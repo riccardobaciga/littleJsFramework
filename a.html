@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div valueOf="nome">Vuoto</div>
+
+<input type="text" valueOf="cognome" />
+
+<button onclick="io.nome = 'pippo'">Pippo</button>
+<button onclick="io.nome = 'pluto'">Pluto</button>
+<script>
+"use strict";
+
+let persona = {};
+let io = new Proxy(persona, {
+  set(target, prop, val) { 
+	  const list = document.querySelectorAll('[valueOf]');
+	  list.forEach((element) => {
+		 if(element.getAttribute("valueOf") == prop){
+			 if (element.nodeName === "INPUT"){
+				element.value = val;
+			 }else{
+				element.innerHTML = val;
+			 };
+		 }
+		}
+	  )
+	  console.log("target[prop] ->"+val+"<-");
+	  target[prop] = val;
+	  return true;
+  }
+}
+); // handler vuoto
+
+io.nome = "riccardo"; 
+io.cognome = "bacigalupo"; 
+console.log("---------");
+console.log("persona.nome ->"+persona.nome+"<-");
+console.log("io.nome ->"+io.nome+"<-"); 
+console.log("---------");
+console.log("persona.cognome ->"+persona.cognome+"<-");
+console.log("io.cognome ->"+io.cognome+"<-"); 
+ 
+for(let key in io) console.log("key ->"+key+"<-"); 
+</script>
+</body>
+</html>
