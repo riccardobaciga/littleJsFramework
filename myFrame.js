@@ -31,5 +31,5 @@ const myApp = new Proxy(myAppObj, {
 });
 
 var _ = function (selector) {
-  return document.querySelector(selector);
+  return document.querySelectorAll(selector);
 };
