@@ -32,7 +32,7 @@
 				<input type="text" valueOf="cognome" placeholder="Cognome" />
 			</div>
 			<div class="col">
-				<button onclick="myApp.stile = 'btn btn-primary'" classOf='stile'>set stile Button</button><br>
+				<button onclick="myApp.stile = 'btn btn-primary'" classOf='stile'>set stile Button to btn- primary</button><br>
 			</div>
 		</div>
 
@@ -47,10 +47,12 @@
 				<button onclick="myApp.cognome = 'pluto'">cognome = Pluto</button><br>
 			</div>
 			<div class="col">
-				<button onclick="location.reload()">Reset</button><br>
+				<button onclick="_('button').forEach(x=>x.className = 'btn btn-info') " >all button to btn info</button><br>
 			</div>
 		</div>
 	</div>
+	
+	<button onclick="location.reload()">Reset</button><br>
 </body>
 
 </html>
