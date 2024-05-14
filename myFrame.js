@@ -7,7 +7,7 @@ const myApp = new Proxy(myAppObj, {
       const list = document.querySelectorAll('[valueOf="' + property + '"]');
       if (list.length > 0) {
         list.forEach((element) => {
-          if (element.nodeName === "INPUT") {
+          if (element.nodeName === "INPUT" || element.nodeName === "SELECT") {
             element.value = value;
           } else {
             element.innerHTML = value;
