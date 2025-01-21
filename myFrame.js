@@ -3,21 +3,24 @@ const myAppObj = {};
 const myApp = new Proxy(myAppObj, {
   set(target, property, value) {
     target[property] = value;
-    if (typeof value !== "object") {
+    const allowedTypes = ['string', 'number', 'boolean']
+    if (allowedTypes.includes(typeof value)) {
+      // const tempValue = myApp.labels[property] || value; // Assign translation or key if not found
+      const tempValue = myApp.labels ? myApp.labels[property] || value : value;
       const list = document.querySelectorAll('[valueOf="' + property + '"]');
       if (list.length > 0) {
         list.forEach((element) => {
-          if (element.nodeName === "INPUT" || element.nodeName === "SELECT") {
-            element.value = value;
+          if (element.nodeName === "INPUT") {
+            element.value = tempValue;
           } else {
-            element.innerHTML = value;
+            element.innerHTML = tempValue;
           }
         });
       }
       const list2 = document.querySelectorAll('[classOf="' + property + '"]');
       if (list2.length > 0) {
         list2.forEach((element) => {
-          element.className = value;
+          element.className = tempValue;
         });
       }
     }
