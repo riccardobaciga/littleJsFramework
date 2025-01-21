@@ -17,7 +17,7 @@ Clicking the button will assign the value `pippo` to `myApp.nome`, and all the e
 <div valueOf="nome">Nome</div>
 <input type="text" valueOf="nome" placeholder="Nome" />
 <button onclick="myApp.nome = 'pippo'">nome = Pippo</button>
-<script src="https://cdn.jsdelivr.net/gh/riccardobaciga/littleJsFramework@main/myFrame.js"></script>
+
 <div valueOf="nome">Nome</div>
 <input type="text" valueOf="nome" placeholder="Nome" />
 <button onclick="myApp.nome = 'pippo'">nome = Pippo</button>
