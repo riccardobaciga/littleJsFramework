@@ -31,3 +31,46 @@ const myApp = new Proxy(myAppObj, {
     return true;
   },
 });
+
+const _ = function (selector) {
+  const found = document.querySelectorAll(selector);
+  var element = found.length == 1 ? found[0] : found;
+  element.hide = function () {
+    if ((element instanceof Element)) {
+      element.classList.remove("visble");
+      element.classList.add("invisible");
+    } else if (element.length > 1) {
+      element.forEach(function (item) {
+        item.classList.remove("visble");
+        item.classList.add("invisible");
+      });
+    }
+  };
+  element.show = function () {
+    if ((element instanceof Element)) {
+      element.classList.add("visble");
+      element.classList.remove("invisible");
+    } else if (element.length > 1) {
+      element.forEach(function (item) {
+        item.classList.add("visble");
+        item.classList.remove("invisible");
+      });
+    }
+  };
+
+  element.onEventDo = function (eventName, functionName, param = null) {
+    if ((element instanceof Element)) {
+      element.addEventListener(eventName, function (param) {
+        (param === null)?functionName():functionName(param);
+      });
+    } else if (element.length > 1) {
+      element.forEach(function (item) {
+        item.addEventListener(eventName, function (param) {
+          (param === null)?functionName():functionName(param);
+        });
+      });
+    }
+  };
+
+  return element;
+};
