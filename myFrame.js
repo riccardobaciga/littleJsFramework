@@ -5,7 +5,6 @@ const myApp = new Proxy(myAppObj, {
     target[property] = value;
     const allowedTypes = ['string', 'number', 'boolean']
     if (allowedTypes.includes(typeof value)) {
-      // const tempValue = myApp.labels[property] || value; // Assign translation or key if not found
       const tempValue = myApp.labels ? myApp.labels[property] || value : value;
       const list = document.querySelectorAll('[valueOf="' + property + '"]');
       if (list.length > 0) {
