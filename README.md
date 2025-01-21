@@ -2,7 +2,7 @@
 ![](https://avatars.githubusercontent.com/u/6079827?s=400&u=445781b6ddba286d493a23cc8501b6309964d1dc&v=4)
 
 
-Download all files and learn how to use my little framework.
+Download all files and look how to use my little framework.
 
 You can download the file `myFrame.js` or link it using the CDN:
 [https://cdn.jsdelivr.net/gh/riccardobaciga/littleJsFramework@main/myFrame.js]
