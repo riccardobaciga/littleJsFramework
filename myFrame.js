@@ -29,8 +29,3 @@ const myApp = new Proxy(myAppObj, {
     return true;
   },
 });
-
-var _ = function (selector) {
-  const result = document.querySelectorAll(selector);
-  return result.length == 1 ? result[0] : result;
-};
