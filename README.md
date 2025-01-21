@@ -1,9 +1,11 @@
-# My Little JavaScript Framework
+# My Little JavaScript Framework 
+![]([https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png](https://avatars.githubusercontent.com/u/6079827?s=400&u=445781b6ddba286d493a23cc8501b6309964d1dc&v=4))
+
 
 Download all files and learn how to use my little framework.
 
 You can download the file `myFrame.js` or link it using the CDN:
-https://cdn.jsdelivr.net/gh/riccardobaciga/littleJsFramework@main/myFrame.js
+[https://cdn.jsdelivr.net/gh/riccardobaciga/littleJsFramework@main/myFrame.js](https://cdn.jsdelivr.net/gh/riccardobaciga/littleJsFramework@main/myFrame.js
 
 # Instruction
 
@@ -35,11 +37,15 @@ Clicking the button will assign the class `pippo` to `myApp.myClass`, and all th
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/riccardobaciga/littleJsFramework@main/myFrame.js"></script>
+<style>
+  .red {
+    background-color: red;
+  }
+</style>
 
-<div valueOf="nome">Nome</div>
-<input type="text" classOf="myClass" placeholder="Nome" />
-
-<button onclick="myApp.myClass = 'pippo'">nome = Pippo</button>
+<div valueOf="nome" classOf="myClass">Nome</div>
+<input type="text" valueOf="nome" placeholder="Nome" class="myClass" />
+<button onclick="myApp.myClass = 'red'">class to Red</button>
 ```
 
 ### License
