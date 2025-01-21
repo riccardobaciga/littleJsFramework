@@ -12,15 +12,14 @@ Clicking the button we assign the value pippo to myApp.nome and all the element 
   <div valueOf="nome">Nome</div>
   <input type="text" valueOf="nome" placeholder="Nome" />
   <button onclick="myApp.nome = 'pippo'">nome = Pippo</button>
-</pre>
   <script src="https://cdn.jsdelivr.net/gh/riccardobaciga/littleJsFramework@main/myFrame.js"></script>
   <div valueOf="nome">Nome</div>
   <input type="text" valueOf="nome" placeholder="Nome" />
   <button onclick="myApp.nome = 'pippo'">nome = Pippo</button>
+</pre>
   
 you can use classOf for all dom element <br>
 you can use _(ele) to select dom elements <br>
 <hr>
 Enjoy it <br>
 Riccardo
-
