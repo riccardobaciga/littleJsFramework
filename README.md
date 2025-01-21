@@ -22,7 +22,7 @@ Clicking the button will assign the value `pippo` to `myApp.nome`, and all the e
 <input type="text" valueOf="nome" placeholder="Nome" />
 <button onclick="myApp.nome = 'pippo'">nome = Pippo</button>
 ```
-you can use _(ele) to select dom elements <br>
+
 <hr>
 Enjoy it <br>
 Riccardo
